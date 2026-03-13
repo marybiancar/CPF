@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master CPF | Gerador & Validador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="glass-card">
+        <header>
+            <h1><i class="fas fa-id-card"></i> Master CPF</h1>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('gerar')">Gerar</button>
+                <button class="tab-btn" onclick="switchTab('validar')">Validar</button>
+            </div>
+        </header>
+
+        <section id="gerar-section">
+            <div class="display-box">
+                <span id="cpf-generated">000.000.000-00</span>
+                <button class="icon-btn" onclick="copyToClipboard()" title="Copiar">
+                    <i class="far fa-copy"></i>
+                </button>
+            </div>
+            <button class="main-btn" onclick="handleGenerate()">
+                <i class="fas fa-magic"></i> Gerar Novo CPF
+            </button>
+        </section>
+
+        <section id="validar-section" class="hidden">
+            <div class="input-group">
+                <input type="text" id="cpf-input" placeholder="000.000.000-00" maxlength="14">
+                <div id="status-badge" class="badge">Aguardando...</div>
+            </div>
+            <p class="hint">Digite apenas números ou com pontos.</p>
+        </section>
+
+        <footer>
+            <p>Ferramenta para desenvolvedores</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

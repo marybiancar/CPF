@@ -1,0 +1,114 @@
+:root {
+    --primary: #6366f1;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --bg: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background: var(--bg);
+    color: white;
+    font-family: 'Inter', system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tabs {
+    display: flex;
+    background: rgba(0,0,0,0.2);
+    padding: 5px;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.display-box {
+    background: rgba(0,0,0,0.3);
+    padding: 1.5rem;
+    border-radius: 16px;
+    font-size: 1.8rem;
+    font-family: monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.main-btn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.main-btn:active { transform: scale(0.98); }
+
+input {
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+
+.badge {
+    margin-top: 1rem;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    background: #334155;
+}
+
+.valid { background: var(--success); }
+.invalid { background: var(--danger); }
+.hidden { display: none; }
+.icon-btn { background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.2rem; }
+footer { margin-top: 2rem; color: #64748b; font-size: 0.8rem; text-align: center; }
